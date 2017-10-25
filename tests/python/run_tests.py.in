@@ -1,0 +1,18 @@
+#!${PYTHON_EXECUTABLE}
+
+
+import os
+import sys
+import unittest
+
+
+# insert built module(s) into python path
+sys.path.insert(0, "${CMAKE_BINARY_DIR}/libdnf")
+
+
+# load all tests from current dir and run them
+loader = unittest.TestLoader()
+suite = loader.discover("${CMAKE_CURRENT_SOURCE_DIR}", pattern="test_*.py")
+result = unittest.TextTestRunner(verbosity=2).run(suite)
+if not result.wasSuccessful():
+    sys.exit(1)

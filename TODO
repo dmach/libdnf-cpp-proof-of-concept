@@ -1,0 +1,4 @@
+* Try swig together with goject introspection
+* Generate docs: doxygen -> breathe -> sphinx ?
+* Is it possible to split pylibdnf into submodules?
+* Coding style guideline - clang-format + config ?

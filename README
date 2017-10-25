@@ -1,0 +1,3 @@
+This is a proof-of-concept project that shows
+how to work with C++ objects and export them
+to Python via SWIG.
