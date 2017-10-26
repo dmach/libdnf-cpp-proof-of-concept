@@ -1,26 +1,4 @@
-%define MODULEIMPORT
-"
-def swig_import_helper():
-    import importlib.util
-    import os
-    import sys
-
-    file_path = os.path.join(os.path.dirname(__file__), '_pylibdnf.so')
-    module_name = '_repo'
-
-    spec = importlib.util.spec_from_file_location(module_name, file_path)
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    sys.modules[module_name] = module
-    return module
-
-_repo = swig_import_helper()
-del swig_import_helper
-"
-%enddef
-
-
-%module(package="pylibdnf", moduleimport=MODULEIMPORT) repo
+%module repo
 
 
 %{
