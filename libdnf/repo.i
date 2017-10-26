@@ -1,3 +1,6 @@
+%module(package="pylibdnf") repo
+
+
 %{
     // make SWIG wrap following headers
     #include "repo.hpp"
@@ -5,6 +8,7 @@
 
 
 %include <attribute.i>
+%include <std_string.i>
 %include <std_wstring.i>
 %include <std_vector.i>
 %include <std_map.i>
