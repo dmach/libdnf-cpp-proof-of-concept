@@ -3,7 +3,8 @@
 
 import unittest
 
-import pylibdnf
+import repo
+import package
 
 
 class TestRepo(unittest.TestCase):
@@ -14,33 +15,33 @@ class TestRepo(unittest.TestCase):
         pass
 
     def test_repoid_default(self):
-        r = pylibdnf.Repo()
+        r = repo.Repo()
         self.assertEqual(r.get_repoid(), "")
         self.assertEqual(r.repoid, "")
 
     def test_repoid_set_get(self):
-        r = pylibdnf.Repo()
+        r = repo.Repo()
         r.set_repoid("a-repo-id")
         self.assertEqual(r.get_repoid(), "a-repo-id")
 
     def test_repoid_property(self):
-        r = pylibdnf.Repo()
+        r = repo.Repo()
         r.repoid = "a-repo-id"
         self.assertEqual(r.repoid, "a-repo-id")
         # verify that the value is identical to what's returned from getter
         self.assertEqual(r.get_repoid(), "a-repo-id")
 
     def test_baseurl_default(self):
-        r = pylibdnf.Repo()
+        r = repo.Repo()
         self.assertEqual(r.get_baseurl(), ())
 
     def test_baseurl_set_get(self):
-        r = pylibdnf.Repo()
+        r = repo.Repo()
         r.set_baseurl(["http://example.com/repo"])
         self.assertEqual(r.get_baseurl(), ("http://example.com/repo", ))
 
     def test_baseurl_property(self):
-        r = pylibdnf.Repo()
+        r = repo.Repo()
         #r.baseurl = ("http://example.com/repo", )
         # verify that the value is identical to what's returned from getter
         #self.assertEqual(r.get_baseurl(), ("http://example.com/repo", ))
@@ -48,13 +49,13 @@ class TestRepo(unittest.TestCase):
 
 class TestRepoDict(unittest.TestCase):
     def test_add_repo(self):
-        r1 = pylibdnf.Repo()
+        r1 = repo.Repo()
         r1.repoid = "a-repo-id"
 
-        r2 = pylibdnf.Repo()
+        r2 = repo.Repo()
         r2.repoid = "another-repo-id"
 
-        rd = pylibdnf.RepoDict()
+        rd = repo.RepoDict()
         rd.add_repo(r1)
 
         repos = {r1.repoid: r1}
@@ -79,13 +80,13 @@ class TestRepoDict(unittest.TestCase):
 
 class TestRepoPackages(unittest.TestCase):
     def test_polymorfism(self):
-        r = pylibdnf.Repo()
+        r = repo.Repo()
 
-        p1 = pylibdnf.RPMPackage()
+        p1 = package.RPMPackage()
         p1.name = "one"
         p1.version = "version"
 
-        p2 = pylibdnf.ModulePackage()
+        p2 = package.ModulePackage()
         p2.name = "two"
         p2.stream = "stream"
 
