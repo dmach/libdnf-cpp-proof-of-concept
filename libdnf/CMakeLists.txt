@@ -23,6 +23,8 @@ SET_TARGET_PROPERTIES (libdnf PROPERTIES SOVERSION ${DNF_SO_VERSION})
 
 
 SET_SOURCE_FILES_PROPERTIES (pylibdnf.i PROPERTIES CPLUSPLUS ON)
-SWIG_ADD_LIBRARY (pylibdnf LANGUAGE python SOURCES pylibdnf.i)
+# SWIG_ADD_LIBRARY doesn't work on RHEL 7 (cmake 2.8.12.2), use SWIG_ADD_MODULE instead
+# SWIG_ADD_LIBRARY (pylibdnf LANGUAGE python SOURCES pylibdnf.i)
+SWIG_ADD_MODULE (pylibdnf python pylibdnf.i)
 SWIG_LINK_LIBRARIES (pylibdnf libdnf)
 SWIG_LINK_LIBRARIES (pylibdnf ${PYTHON_LIBRARY})
