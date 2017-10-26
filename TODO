@@ -1,4 +1,11 @@
+TODO:
 * Try swig together with goject introspection
+* Try swig together with hand-written Python bindings
 * Generate docs: doxygen -> breathe -> sphinx ?
-* Is it possible to split pylibdnf into submodules?
 * Coding style guideline - clang-format + config ?
+* Unittests example
+* Build bindings for multiple languages
+* Package as an RPM
+
+DONE:
+* Is it possible to split pylibdnf into submodules?
