@@ -11,7 +11,9 @@
 
 %{
     // make SWIG wrap following headers
-    #include "repo.hpp"
+    #include "repo/repo.hpp"
+    #include "repo/repodict.hpp"
+    #include "package/package.hpp"
 %}
 
 namespace std {
@@ -22,9 +24,11 @@ namespace std {
 
 
 // make SWIG look into following headers
-%include "repo.hpp"
-
+%include "repo/repo.hpp"
+%include "repo/repodict.hpp"
+%include "package/package.hpp"
 
 
 %attribute(Repo, std::string, repoid, get_repoid, set_repoid);
 %attribute(Repo, std::vector<std::string>&, baseurl, get_baseurl, set_baseurl);
+%attribute(Repo, std::vector<Package *>&, packages, getPackages, setPackages);
