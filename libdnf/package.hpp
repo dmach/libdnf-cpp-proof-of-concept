@@ -1,32 +1,8 @@
-#ifndef DNF_PACKAGE_HPP
-#define DNF_PACKAGE_HPP
+#ifndef LIBDNF_PACKAGE_HEADERS_H_H
+#define LIBDNF_PACKAGE_HEADERS_H_H
 
+#include "package/package.hpp"
+#include "package/modulepackage.hpp"
+#include "package/rpmpackage.hpp"
 
-#include <string>
-
-
-class Package {
-    public:
-        Package() {};
-        virtual ~Package() = default;
-        std::string name;
-};
-
-
-class RPMPackage : public Package {
-    public:
-        RPMPackage() {};
-        std::string version;
-        std::string release;
-};
-
-
-class ModulePackage : public Package {
-    public:
-        ModulePackage() {};
-        std::string stream;
-        long long version;
-};
-
-
-#endif
+#endif //LIBDNF_PACKAGE_HEADERS_H_H

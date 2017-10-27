@@ -2,11 +2,15 @@ MESSAGE ("Running CMake on libdnf...")
 CMAKE_MINIMUM_REQUIRED (VERSION 2.8)
 
 
-ADD_COMPILE_OPTIONS (-std=c++11 -Wall -Wextra -Wno-unused-parameter -fPIC)
+ADD_COMPILE_OPTIONS (-std=c++11 -Wall -Wextra -Werror -Wno-unused-parameter -fPIC)
 
+set(CMAKE_MACOSX_RPATH 0) # to disable MAC OS warnings
 
 PROJECT (libdnf)
 
+if (NOT PYTHON_DESIRED)
+    set (PYTHON_DESIRED "3")
+endif()
 
 if (${PYTHON_DESIRED} STREQUAL "2")
     message("Building for python2")
