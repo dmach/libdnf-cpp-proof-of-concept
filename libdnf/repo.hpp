@@ -17,14 +17,14 @@ class Repo {
     private:
         string _repoid;
         string _name;
-        vector< wstring > _baseurl;
+        vector<string> _baseurl;
 
     public:
         void set_repoid(string value);
         const string& get_repoid();
 
-        void set_baseurl(const vector< wstring >& value);
-        const vector< wstring >& get_baseurl();
+        void set_baseurl(const vector<string>& value);
+        const vector<string>& get_baseurl();
 
         vector<Package *> packages;
 };

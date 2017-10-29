@@ -19,12 +19,12 @@ const string& Repo::get_repoid() {
 }
 
 
-void Repo::set_baseurl(const vector<wstring>& value) {
+void Repo::set_baseurl(const vector<string>& value) {
     this->_baseurl = value;
 }
 
 
-const vector<wstring>& Repo::get_baseurl() {
+const vector<string>& Repo::get_baseurl() {
     return this->_baseurl;
 }
 
