@@ -20,7 +20,7 @@ class Repo {
         vector<string> _baseurl;
 
     public:
-        void set_repoid(string value);
+        void set_repoid(const string & value);
         const string& get_repoid();
 
         void set_baseurl(const vector<string>& value);

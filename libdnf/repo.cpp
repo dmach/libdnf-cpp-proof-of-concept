@@ -9,7 +9,7 @@
 using namespace std;
 
 
-void Repo::set_repoid(string value) {
+void Repo::set_repoid(const string & value) {
     this->_repoid = value;
 }
 
