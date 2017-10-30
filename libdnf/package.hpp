@@ -3,29 +3,28 @@
 
 
 #include <string>
-using namespace std;
 
 
 class Package {
     public:
         Package() {};
         virtual ~Package() = default;
-        string name;
+        std::string name;
 };
 
 
 class RPMPackage : public Package {
     public:
         RPMPackage() {};
-        string version;
-        string release;
+        std::string version;
+        std::string release;
 };
 
 
 class ModulePackage : public Package {
     public:
         ModulePackage() {};
-        string stream;
+        std::string stream;
         long long version;
 };
 
