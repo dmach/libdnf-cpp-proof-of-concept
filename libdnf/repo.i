@@ -1,22 +1,23 @@
 %module repo
 
 
+%include <attribute.i>
+%include <std_string.i>
+%include <std_vector.i>
+%include <std_map.i>
+%include <std_shared_ptr.i>
+
+%shared_ptr(Repo)
+
 %{
     // make SWIG wrap following headers
     #include "repo.hpp"
 %}
 
-
-%include <attribute.i>
-%include <std_string.i>
-%include <std_vector.i>
-%include <std_map.i>
-
-
 namespace std {
     %template(list_string) vector<string>;
     %template(list_package) vector<Package*>;
-    %template() map<string, Repo>;
+    %template() map<string, shared_ptr<Repo>>;
 }
 
 
