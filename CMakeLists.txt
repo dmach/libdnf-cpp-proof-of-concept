@@ -12,6 +12,11 @@ if (NOT PYTHON_DESIRED)
     set (PYTHON_DESIRED "3")
 endif()
 
+find_package(PkgConfig)
+SET (CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules)
+PKG_CHECK_MODULES(GLIB gio-unix-2.0>=2.46.0 REQUIRED)
+INCLUDE_DIRECTORIES(${GLIB_INCLUDE_DIRS})
+
 if (${PYTHON_DESIRED} STREQUAL "2")
     message("Building for python2")
     FIND_PACKAGE (PythonInterp 2 REQUIRED)
