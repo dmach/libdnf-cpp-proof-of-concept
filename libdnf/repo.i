@@ -25,5 +25,5 @@ namespace std {
 
 
 
-%attribute(Repo, string, repoid, get_repoid, set_repoid);
-%attribute(Repo, vector<string>&, baseurl, get_baseurl, set_baseurl);
+%attribute(Repo, std::string, repoid, get_repoid, set_repoid);
+%attribute(Repo, std::vector<std::string>&, baseurl, get_baseurl, set_baseurl);

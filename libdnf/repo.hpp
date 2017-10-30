@@ -1,42 +1,39 @@
 #ifndef DNF_REPO_HPP
 #define DNF_REPO_HPP
 
-
 #include <string>
 #include <vector>
 #include <map>
 #include <functional>
 #include <iostream>
-using namespace std;
 
 #include "package.hpp"
 
 
-
 class Repo {
     private:
-        string _repoid;
-        string _name;
-        vector<string> _baseurl;
+        std::string _repoid;
+        std::string _name;
+        std::vector<std::string> _baseurl;
 
     public:
-        void set_repoid(const string & value);
-        const string& get_repoid();
+        void set_repoid(const std::string & value);
+        const std::string& get_repoid();
 
-        void set_baseurl(const vector<string>& value);
-        const vector<string>& get_baseurl();
+        void set_baseurl(const std::vector<std::string>& value);
+        const std::vector<std::string>& get_baseurl();
 
-        vector<Package *> packages;
+        std::vector<Package *> packages;
 };
 
 
 class RepoDict {
     private:
-        map<string, Repo> _repos;
+        std::map<std::string, Repo> _repos;
 
     public:
-        void set_repos(const map<string,Repo>& value);
-        const map<string,Repo>& get_repos();
+        void set_repos(const std::map<std::string,Repo>& value);
+        const std::map<std::string,Repo>& get_repos();
         void add_repo(Repo repo);
 };
 
