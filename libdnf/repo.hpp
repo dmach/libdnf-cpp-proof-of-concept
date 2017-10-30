@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 
 #include "package.hpp"
 
@@ -27,12 +28,12 @@ class Repo {
 
 class RepoDict {
     private:
-        std::map<std::string, Repo> _repos;
+        std::map<std::string, std::shared_ptr<Repo>> _repos;
 
     public:
-        void set_repos(const std::map<std::string,Repo>& value);
-        const std::map<std::string,Repo>& get_repos();
-        void add_repo(Repo repo);
+        void set_repos(const std::map<std::string, std::shared_ptr<Repo>> & value);
+        const std::map<std::string, std::shared_ptr<Repo>> & get_repos();
+        void add_repo(std::shared_ptr<Repo> & repo);
 };
 
 #endif
