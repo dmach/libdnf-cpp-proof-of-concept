@@ -4,8 +4,6 @@
 #include <string>
 #include <vector>
 #include <map>
-#include <functional>
-#include <iostream>
 
 #include "package.hpp"
 

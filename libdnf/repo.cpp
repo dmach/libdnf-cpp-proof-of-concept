@@ -1,9 +1,3 @@
-#include <string>
-#include <vector>
-#include <map>
-#include <functional>
-#include <iostream>
-
 #include "repo.hpp"
 
 using namespace std;
