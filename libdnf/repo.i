@@ -17,7 +17,7 @@
 namespace std {
     %template(list_string) vector<string>;
     %template(list_package) vector<Package*>;
-    %template() map<string, shared_ptr<Repo>>;
+    %template() map<string, shared_ptr<Repo> >;
 }
 
 

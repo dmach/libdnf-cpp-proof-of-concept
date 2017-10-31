@@ -28,11 +28,11 @@ class Repo {
 
 class RepoDict {
     private:
-        std::map<std::string, std::shared_ptr<Repo>> _repos;
+        std::map<std::string, std::shared_ptr<Repo> > _repos;
 
     public:
-        void set_repos(const std::map<std::string, std::shared_ptr<Repo>> & value);
-        const std::map<std::string, std::shared_ptr<Repo>> & get_repos();
+        void set_repos(const std::map<std::string, std::shared_ptr<Repo> > & value);
+        const std::map<std::string, std::shared_ptr<Repo> > & get_repos();
         void add_repo(std::shared_ptr<Repo> & repo);
 };
 

@@ -23,11 +23,11 @@ const vector<string>& Repo::get_baseurl() {
 }
 
 
-void RepoDict::set_repos(const map<string, shared_ptr<Repo>> & repos) {
+void RepoDict::set_repos(const map<string, shared_ptr<Repo> > & repos) {
     _repos = repos;
 }
 
-const map<string, shared_ptr<Repo>> & RepoDict::get_repos() {
+const map<string, shared_ptr<Repo> > & RepoDict::get_repos() {
     return _repos;
 }
 
