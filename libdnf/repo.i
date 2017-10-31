@@ -7,7 +7,7 @@
 %include <std_map.i>
 %include <std_shared_ptr.i>
 
-%shared_ptr(Repo)
+%shared_ptr(libdnf::Repo)
 
 %{
     // make SWIG wrap following headers
@@ -16,19 +16,17 @@
     #include "package/package.hpp"
 %}
 
-namespace std {
-    %template(list_string) vector<string>;
-    %template(list_package) vector<Package*>;
-    %template() map<string, shared_ptr<Repo> >;
-}
-
+%template(list_string) std::vector<std::string>;
+%template(list_package) std::vector<libdnf::Package*>;
+%template() std::map<std::string, std::shared_ptr<libdnf::Repo> >;
 
 // make SWIG look into following headers
 %include "repo/repo.hpp"
 %include "repo/repodict.hpp"
 %include "package/package.hpp"
 
+using libdnf::Package;
 
-%attribute(Repo, std::string, repoid, get_repoid, set_repoid);
-%attribute(Repo, std::vector<std::string>&, baseurl, get_baseurl, set_baseurl);
-%attribute(Repo, std::vector<Package *>&, packages, getPackages, setPackages);
+%attribute(libdnf::Repo, std::string, repoid, get_repoid, set_repoid);
+%attribute(libdnf::Repo, std::vector<std::string>&, baseurl, get_baseurl, set_baseurl);
+%attribute(libdnf::Repo, std::vector<libdnf::Package *>&, packages, getPackages, setPackages);

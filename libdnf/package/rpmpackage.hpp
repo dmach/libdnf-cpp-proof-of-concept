@@ -5,6 +5,8 @@
 
 #include "package.hpp"
 
+namespace libdnf {
+
 class RPMPackage : public Package {
 public:
     RPMPackage() = default;
@@ -16,5 +18,7 @@ private:
     std::string version;
     std::string release;
 };
+
+}
 
 #endif //LIBDNF_RPMPACKAGE_H

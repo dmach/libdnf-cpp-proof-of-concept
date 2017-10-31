@@ -5,6 +5,8 @@
 
 #include "package.hpp"
 
+namespace libdnf {
+
 class ModulePackage : public Package {
 public:
     ModulePackage() = default;;
@@ -17,5 +19,7 @@ private:
     std::string stream;
     long long version;
 };
+
+}
 
 #endif //LIBDNF_MODULEPACKAGE_H

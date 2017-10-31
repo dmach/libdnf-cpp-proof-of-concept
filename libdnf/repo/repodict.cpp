@@ -5,6 +5,8 @@
 
 using namespace std;
 
+namespace libdnf {
+
 void RepoDict::set_repos(const map<string, shared_ptr<Repo> > &value) {
     repos = value;
 }
@@ -17,3 +19,4 @@ void RepoDict::add_repo(shared_ptr<Repo> repo) {
     repos[repo->get_repoid()] = repo;
 }
 
+}

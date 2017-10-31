@@ -3,6 +3,8 @@
 
 #include <string>
 
+namespace libdnf {
+
 class Package {
 public:
     Package() = default;
@@ -16,5 +18,7 @@ public:
 protected:
     std::string name;
 };
+
+}
 
 #endif

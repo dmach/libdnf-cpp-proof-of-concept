@@ -5,6 +5,7 @@
 
 using namespace std;
 
+namespace libdnf {
 
 void Repo::set_repoid(const string &value) {
     repoid = value;
@@ -31,4 +32,6 @@ const std::vector<Package *> &Repo::getPackages() const {
 
 void Repo::setPackages(vector<Package *> &value) {
     packages = value;
+}
+
 }

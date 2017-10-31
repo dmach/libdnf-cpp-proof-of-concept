@@ -7,6 +7,8 @@
 
 #include "package.hpp"
 
+namespace libdnf {
+
 class Repo {
 public:
     void set_repoid(const std::string &value);
@@ -21,7 +23,8 @@ private:
     std::string name;
     std::vector<std::string> baseurl;
     std::vector<Package *> packages;
-
 };
+
+}
 
 #endif

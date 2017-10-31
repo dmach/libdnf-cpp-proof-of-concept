@@ -6,6 +6,8 @@
 
 #include "repo.hpp"
 
+namespace libdnf {
+
 class RepoDict {
 public:
     void set_repos(const std::map<std::string, std::shared_ptr<Repo> > &value);
@@ -15,5 +17,7 @@ public:
 private:
     std::map <std::string, std::shared_ptr<Repo> > repos;
 };
+
+}
 
 #endif //LIBDNF_REPODICT_H
