@@ -1,9 +1,10 @@
 TODO:
+* [BLOCKER] Generate docs: doxygen -> breathe -> sphinx ?
+* [BLOCKER] C unittest example (exceptions, classes)
+* [BLOCKER] Translations
 * Try swig together with goject introspection
 * Try swig together with hand-written Python bindings
-* Generate docs: doxygen -> breathe -> sphinx ?
 * Coding style guideline - clang-format + config ?
-* Unittests example
 * Build bindings for multiple languages
 * Package as an RPM
 * Exceptions
@@ -11,7 +12,7 @@ TODO:
 * Exceptions -> SWIG -> PYTHON
 * INI parser
 * Option parser
-* Translations
 
 DONE:
 * Is it possible to split pylibdnf into submodules?
+* Python unittest example
