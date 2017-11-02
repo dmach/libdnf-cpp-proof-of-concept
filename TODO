@@ -9,6 +9,8 @@ TODO:
 * Exceptions
 * Exceptions -> C
 * Exceptions -> SWIG -> PYTHON
+* INI parser
+* Option parser
 
 DONE:
 * Is it possible to split pylibdnf into submodules?
