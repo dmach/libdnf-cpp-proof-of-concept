@@ -7,7 +7,7 @@
 
 class ModulePackage : public Package {
 public:
-    ModulePackage() = default;;
+    ModulePackage() = default;
 
     // class is small enough for now, is it ok to leave getters in header ??
     const std::string &getStream() const { return stream; }
@@ -18,4 +18,4 @@ private:
     long long version;
 };
 
-#endif //LIBDNF_MODULEPACKAGE_H
+#endif // LIBDNF_MODULEPACKAGE_H

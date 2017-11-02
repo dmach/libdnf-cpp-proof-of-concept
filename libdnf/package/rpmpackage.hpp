@@ -17,4 +17,4 @@ private:
     std::string release;
 };
 
-#endif //LIBDNF_RPMPACKAGE_H
+#endif // LIBDNF_RPMPACKAGE_H

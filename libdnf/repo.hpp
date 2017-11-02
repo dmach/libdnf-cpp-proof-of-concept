@@ -4,4 +4,4 @@
 #include "repo/repo.hpp"
 #include "repo/repodict.hpp"
 
-#endif //LIBDNF_REPO_HPP
+#endif // LIBDNF_REPO_HPP

@@ -1,7 +1,6 @@
 #ifndef DNF_REPO_HPP
 #define DNF_REPO_HPP
 
-
 #include <string>
 #include <vector>
 
@@ -21,7 +20,6 @@ private:
     std::string name;
     std::vector<std::string> baseurl;
     std::vector<Package *> packages;
-
 };
 
 #endif
