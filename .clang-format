@@ -1,24 +1,26 @@
 ---
-BasedOnStyle:           Mozilla
-IndentWidth:            4
-TabWidth:               4
-UseTab:                 Never
-AccessModifierOffset:   -4
-PointerAlignment:       Right
-ColumnLimit:            120
-BreakBeforeBraces:      Custom
+BasedOnStyle:                           Mozilla
+ColumnLimit:                            120
+IndentWidth:                            4
+ContinuationIndentWidth:                4
+TabWidth:                               4
+UseTab:                                 Never
+AccessModifierOffset:                   -4
+PointerAlignment:                       Right
+BreakBeforeBraces:                      Custom
 BraceWrapping:
-  AfterClass:                   true
-  AfterControlStatement:        false
-  AfterEnum:                    true
-  AfterFunction:                true
-  AfterNamespace:               false
-  AfterObjCDeclaration:         false
-  AfterStruct:                  true
-  AfterUnion:                   true
-  BeforeCatch:                  false
-  BeforeElse:                   true
-  IndentBraces:                 false
+  AfterClass:                           false
+  AfterControlStatement:                false
+  AfterEnum:                            true
+  AfterFunction:                        true
+  AfterNamespace:                       false
+  AfterObjCDeclaration:                 false
+  AfterStruct:                          true
+  AfterUnion:                           true
+  BeforeCatch:                          false
+  BeforeElse:                           true
+  IndentBraces:                         false
+AlwaysBreakBeforeMultilineStrings:      true
 ---
 Language:               Cpp
 Standard:               Cpp03
