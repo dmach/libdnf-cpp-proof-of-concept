@@ -6,6 +6,9 @@ TODO:
 * Unittests example
 * Build bindings for multiple languages
 * Package as an RPM
+* Exceptions
+* Exceptions -> C
+* Exceptions -> SWIG -> PYTHON
 
 DONE:
 * Is it possible to split pylibdnf into submodules?
