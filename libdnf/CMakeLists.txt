@@ -11,6 +11,7 @@ SET (LIBDNF_HEADERS
         repo.hpp
         )
 
+ADD_SUBDIRECTORY(bgettext)
 ADD_SUBDIRECTORY(repo)
 ADD_SUBDIRECTORY(package)
 
