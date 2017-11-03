@@ -23,6 +23,8 @@ else()
     FIND_PACKAGE(PythonLibs 3 REQUIRED)
 endif()
 
+SET(COMMON_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin")
+
 
 INCLUDE_DIRECTORIES ("libdnf")
 ADD_SUBDIRECTORY ("libdnf")
@@ -31,4 +33,4 @@ ADD_SUBDIRECTORY ("doc")
 
 # configure tests
 ENABLE_TESTING ()
-ADD_SUBDIRECTORY ("tests/python")
+ADD_SUBDIRECTORY ("tests")
