@@ -1,12 +1,13 @@
+PROJECT (libdnf)
+
 MESSAGE ("Running CMake on libdnf...")
 CMAKE_MINIMUM_REQUIRED (VERSION 2.8)
 
-
-ADD_COMPILE_OPTIONS (-std=c++11 -Wall -Wextra -Werror -Wno-unused-parameter -fPIC)
+set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu11 -Wall -Wextra -Werror -Wno-unused-parameter -fPIC")
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Wextra -Werror -Wno-unused-parameter -fPIC")
+include (CheckSymbolExists)
 
 set(CMAKE_MACOSX_RPATH 0) # to disable MAC OS warnings
-
-PROJECT (libdnf)
 
 if (NOT PYTHON_DESIRED)
     set (PYTHON_DESIRED "3")
