@@ -3,7 +3,7 @@ SET(DNF_SWDB_DIR
 )
 
 SET(DNF_SWDB_SOURCES
-    ${DNF_SWDB_DIR}/dnf-swdb-pkg.c
+    ${DNF_SWDB_DIR}/dnf-swdb-pkg.cpp
 )
 
 SET(LIBDNF_SOURCES

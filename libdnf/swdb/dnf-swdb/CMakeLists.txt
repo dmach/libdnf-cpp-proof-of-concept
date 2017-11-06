@@ -2,11 +2,11 @@ SET (DNF_GI_VERSION 42.0)
 
 # source files used for gir generation
 SET (DNF_SWDB_SOURCES
-    dnf-swdb-pkg.c
+    dnf-swdb-pkg.cpp
 )
 
 SET (DNF_SWDB_HEADERS
-    dnf-swdb-pkg.h
+    dnf-swdb-pkg.hpp
 )
 
 # gir generation - GObject introspection
