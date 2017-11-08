@@ -2,6 +2,8 @@ TODO:
 * [BLOCKER] Generate docs: doxygen -> breathe -> sphinx ?
 * [BLOCKER] C unittest example (exceptions, classes)
 * [BLOCKER] Translations
+* [BLOCKER] String formatting (needed for translations)
+* [BLOCKER] Logging (2 loggers connected to each other; the first logs to stdout/stderr, the second logs to file and first logger)
 * Try swig together with goject introspection
 * Try swig together with hand-written Python bindings
 * Coding style guideline - clang-format + config ?
