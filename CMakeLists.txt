@@ -26,6 +26,7 @@ endif()
 
 INCLUDE_DIRECTORIES ("libdnf")
 ADD_SUBDIRECTORY ("libdnf")
+ADD_SUBDIRECTORY ("doc")
 
 
 # configure tests
