@@ -18,3 +18,12 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+Example API Reference
+=====================
+
+.. doxygenclass:: Package
+   :members:
+
+.. doxygenclass:: Repo
+   :members:
