@@ -25,5 +25,8 @@ Example API Reference
 .. doxygenclass:: Package
    :members:
 
+.. doxygenclass:: RPMPackage
+   :members:
+
 .. doxygenclass:: Repo
    :members:
