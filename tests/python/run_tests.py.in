@@ -8,7 +8,7 @@ import unittest
 
 # insert built module(s) into python path
 sys.path.insert(0, "${CMAKE_BINARY_DIR}/libdnf")
-
+os.environ["GI_TYPELIB_PATH"] = "${LIB_INSTALL_DIR}/girepository-1.0"
 
 # load all tests from current dir and run them
 loader = unittest.TestLoader()
